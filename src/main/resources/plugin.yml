@@ -1,0 +1,65 @@
+name: Replant
+version: '${project.version}'
+main: org.achymake.replant.Replant
+api-version: '1.21'
+prefix: '${project.name}'
+load: STARTUP
+depend:
+  - WorldGuard
+author: AchyMake
+description: '${project.description}'
+website: '${project.url}'
+commands:
+  replant:
+    description: replant command
+    permission: replant.command.replant
+    permission-message: You do not have the permissions to execute the command
+permissions:
+  replant.command.replant:
+    description: replant command
+    default: op
+  replant.event.replant:
+    description: allows to replant with all
+    default: op
+    children:
+      - replant.event.replant.hand
+      - replant.event.replant.wooden_hoe
+      - replant.event.replant.stone_hoe
+      - replant.event.replant.iron_hoe
+      - replant.event.replant.golden_hoe
+      - replant.event.replant.diamond_hoe
+      - replant.event.replant.netherite_hoe
+  replant.event.replant.hand:
+    description: allows to replant with hand
+    default: op
+  replant.event.replant.hoe:
+    description: allows to replant with all hoe
+    default: op
+    children:
+      - replant.event.replant.wooden_hoe
+      - replant.event.replant.stone_hoe
+      - replant.event.replant.iron_hoe
+      - replant.event.replant.golden_hoe
+      - replant.event.replant.diamond_hoe
+      - replant.event.replant.netherite_hoe
+  replant.event.replant.wooden_hoe:
+    description: allows to replant with wooden hoe
+    default: op
+  replant.event.replant.stone_hoe:
+    description: allows to replant with stone hoe
+    default: op
+  replant.event.replant.iron_hoe:
+    description: allows to replant with iron hoe
+    default: op
+  replant.event.replant.golden_hoe:
+    description: allows to replant with golden hoe
+    default: op
+  replant.event.replant.diamond_hoe:
+    description: allows to replant with diamond hoe
+    default: op
+  replant.event.replant.netherite_hoe:
+    description: allows to replant with netherite hoe
+    default: op
+  replant.event.join.update:
+    description: gets update
+    default: op
