@@ -15,7 +15,7 @@ replant:
     - test
 blocks:
   MELON:
-    enable: true
+    enable: false
     damage: 1
     drops:
       melon:
@@ -40,7 +40,7 @@ blocks:
         volume: 0.75
         pitch: 1.0
   PUMPKIN:
-    enable: true
+    enable: false
     damage: 1
     drops:
       pumpkin:
